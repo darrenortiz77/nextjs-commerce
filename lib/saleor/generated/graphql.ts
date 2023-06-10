@@ -24547,6 +24547,7 @@ export type CheckoutFragment = {
             values: Array<{ name?: string | null }>;
           }>;
           pricing?: { price?: { gross: { currency: string; amount: number } } | null } | null;
+          quantityAvailable: number;
         }> | null;
       };
       attributes: Array<{
@@ -24684,6 +24685,7 @@ export type CheckoutAddLineMutation = {
                 values: Array<{ name?: string | null }>;
               }>;
               pricing?: { price?: { gross: { currency: string; amount: number } } | null } | null;
+              quantityAvailable: number;
             }> | null;
           };
           attributes: Array<{
@@ -24752,6 +24754,7 @@ export type CheckoutDeleteLineMutation = {
                 values: Array<{ name?: string | null }>;
               }>;
               pricing?: { price?: { gross: { currency: string; amount: number } } | null } | null;
+              quantityAvailable: number;
             }> | null;
           };
           attributes: Array<{
@@ -24820,6 +24823,7 @@ export type CheckoutUpdateLineMutation = {
                 values: Array<{ name?: string | null }>;
               }>;
               pricing?: { price?: { gross: { currency: string; amount: number } } | null } | null;
+              quantityAvailable: number;
             }> | null;
           };
           attributes: Array<{
@@ -24887,6 +24891,7 @@ export type CreateCheckoutMutation = {
                 values: Array<{ name?: string | null }>;
               }>;
               pricing?: { price?: { gross: { currency: string; amount: number } } | null } | null;
+              quantityAvailable: number;
             }> | null;
           };
           attributes: Array<{
@@ -24957,6 +24962,7 @@ export type GetCategoryProductsBySlugQuery = {
               values: Array<{ name?: string | null }>;
             }>;
             pricing?: { price?: { gross: { currency: string; amount: number } } | null } | null;
+            quantityAvailable: number;
           }> | null;
         };
       }>;
@@ -25012,6 +25018,7 @@ export type GetCheckoutByIdQuery = {
               values: Array<{ name?: string | null }>;
             }>;
             pricing?: { price?: { gross: { currency: string; amount: number } } | null } | null;
+            quantityAvailable: number;
           }> | null;
         };
         attributes: Array<{
@@ -25081,6 +25088,7 @@ export type GetCollectionProductsBySlugQuery = {
               values: Array<{ name?: string | null }>;
             }>;
             pricing?: { price?: { gross: { currency: string; amount: number } } | null } | null;
+            quantityAvailable: number;
           }> | null;
         };
       }>;
@@ -25261,6 +25269,7 @@ export type GetProductBySlugQuery = {
         values: Array<{ name?: string | null }>;
       }>;
       pricing?: { price?: { gross: { currency: string; amount: number } } | null } | null;
+      quantityAvailable: number;
     }> | null;
   } | null;
 };
@@ -25303,6 +25312,7 @@ export type SearchProductsQuery = {
             values: Array<{ name?: string | null }>;
           }>;
           pricing?: { price?: { gross: { currency: string; amount: number } } | null } | null;
+          quantityAvailable: number;
         }> | null;
       };
     }>;
