@@ -7,6 +7,7 @@ import Footer from 'components/layout/footer';
 import ProductGridItems from 'components/layout/product-grid-items';
 import { AddToCart } from 'components/product/add-to-cart';
 import { Gallery } from 'components/product/gallery';
+import { Quantity } from 'components/product/quantity';
 import { VariantSelector } from 'components/product/variant-selector';
 import Prose from 'components/prose';
 import { HIDDEN_PRODUCT_TAG } from 'lib/constants';
@@ -80,6 +81,8 @@ export default async function ProductPage({ params }: { params: { handle: string
           {product.descriptionHtml ? (
             <Prose className="mb-6 text-sm leading-tight" html={product.descriptionHtml} />
           ) : null}
+
+          <Quantity variants={product.variants} />
 
           <AddToCart variants={product.variants} availableForSale={product.availableForSale} />
         </div>

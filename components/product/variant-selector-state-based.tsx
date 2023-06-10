@@ -57,17 +57,15 @@ export function VariantSelectorStateBased({
               }}
               disabled={isActive || !isAvailableForSale}
               title={`${option.name} ${value}${!isAvailableForSale ? ' (Out of Stock)' : ''}`}
-              className={clsx(
-                'flex h-12 min-w-[48px] items-center justify-center rounded-full px-2 text-sm',
-                {
-                  'cursor-default ring-2 ring-black dark:ring-white': isActive,
-                  'ring-1 ring-gray-300 transition duration-300 ease-in-out hover:scale-110 hover:bg-gray-100 hover:ring-black dark:ring-gray-700 dark:hover:bg-transparent dark:hover:ring-white':
-                    !isActive && isAvailableForSale,
-                  'relative z-10 cursor-not-allowed overflow-hidden bg-gray-100 ring-1 ring-gray-300 before:absolute before:inset-x-0 before:-z-10 before:h-px before:-rotate-45 before:bg-gray-300 before:transition-transform dark:bg-gray-900 dark:ring-gray-700 before:dark:bg-gray-700':
-                    !isAvailableForSale,
-                  'h-[32px] min-w-[32px] px-1 text-[10px]': small
-                }
-              )}
+              className={clsx('flex items-center justify-center rounded-full', {
+                'cursor-default ring-2 ring-black dark:ring-white': isActive,
+                'ring-1 ring-gray-300 transition duration-300 ease-in-out hover:scale-110 hover:bg-gray-100 hover:ring-black dark:ring-gray-700 dark:hover:bg-transparent dark:hover:ring-white':
+                  !isActive && isAvailableForSale,
+                'relative z-10 cursor-not-allowed overflow-hidden bg-gray-100 ring-1 ring-gray-300 before:absolute before:inset-x-0 before:-z-10 before:h-px before:-rotate-45 before:bg-gray-300 before:transition-transform dark:bg-gray-900 dark:ring-gray-700 before:dark:bg-gray-700':
+                  !isAvailableForSale,
+                'h-[32px] min-w-[32px] px-1 text-[10px]': small,
+                'h-12 min-w-[48px] px-2 text-sm': !small
+              })}
               data-testid={isActive ? 'selected-variant' : 'variant'}
             >
               {value}

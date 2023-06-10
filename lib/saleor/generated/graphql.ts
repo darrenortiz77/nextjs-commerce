@@ -24630,6 +24630,7 @@ export type VariantFragment = {
     values: Array<{ name?: string | null }>;
   }>;
   pricing?: { price?: { gross: { currency: string; amount: number } } | null } | null;
+  quantityAvailable: number;
 };
 
 export type CheckoutAddLineMutationVariables = Exact<{
@@ -26537,6 +26538,7 @@ fragment Variant on ProductVariant {
       name
     }
   }
+  quantityAvailable
   pricing {
     price {
       gross {
