@@ -261,3 +261,11 @@ export type VercelCommerceProductsOperation = {
     sortKey?: string;
   };
 };
+
+export type OptimizedVariant = {
+  id: string;
+  availableForSale: boolean;
+  params: URLSearchParams;
+  price: string;
+  [key: string]: string | boolean | URLSearchParams; // ie. { color: 'Red', size: 'Large', ... }
+};
